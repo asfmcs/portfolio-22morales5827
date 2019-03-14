@@ -1,0 +1,71 @@
+/*Styling for the Navigation bar*/
+
+.topnav {
+  overflow: hidden;
+  background-color: rgb(236, 19, 19);
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav a:hover {
+  background-color: rgb(236, 133, 133);
+  color: rgb(255, 255, 255);
+}
+
+/*Coped CSS from the project */
+
+h1
+{
+text-align:center;
+color:rgb(61, 122, 236);
+text-decoration:underline  wavy blue;
+text-shadow: -2px 6px black;
+border:solid 3px skyblue;
+border-style:double;
+padding:20px;
+margin-left:100px;
+margin-right:100px;
+}
+#img1
+{
+  display:block;
+  margin-right:auto;
+  margin-left:auto;
+}
+body
+{
+  background-color:rgb(12, 71, 105)
+}
+.invited
+{
+  text-align:center;
+  font-style:oblique;
+  margin-left:auto;
+  margin-right:auto;
+color:rgb(135, 136, 228);
+}
+
+#bday
+{
+  position:relative;
+  z-index:4;
+  left:200px
+  top:10px;
+color:lightskyblue;
+font-size:60px;
+text-align:center;
+
+}
+#skrrt
+{
+  margin-left:48%;
+  margin-right:50%;
+}

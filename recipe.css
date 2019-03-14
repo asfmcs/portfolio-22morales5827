@@ -1,0 +1,92 @@
+/*Styling for the Navigation bar*/
+
+.topnav {
+  overflow: hidden;
+  background-color: rgb(236, 19, 19);
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav a:hover {
+  background-color: rgb(236, 133, 133);
+  color: rgb(255, 255, 255);
+}
+
+/* Copied CSS from the project */
+#title
+{
+font-family:cursive;
+color:darkred;
+text-align:center;}
+
+.tbs
+{
+  margin-left:auto;
+  margin-right:auto;
+}
+body
+{
+background-color:beige}
+
+.heinf
+{
+font-family:cursive;
+color:darkred;
+text-align:center;}
+.heing
+{
+  font-family:cursive;
+  color:darkred;
+  text-align:center;
+}
+.tbs
+{
+color:darkred;}
+.steps
+{
+  font-family:cursive;
+  color:darkred;
+  text-align:center;}
+
+/* I aligned left, because the numbers wouldn't center with the steps no matter what I did. */
+  li
+{
+  text-align:left;
+  color:darkred;
+margin-left: auto;
+ margin-right: auto;
+}
+
+.srctxt
+{
+text-align:center;
+color: darkred;
+font-family: cursive;
+}
+/*Again, I had to align it left because I couldn't center the list correctly.*/
+#muffinlist
+{
+display: inline-block;
+text-align:left;
+color: darkred;
+}
+#ingtb2
+{
+  width: 40%;
+  height: 20%;
+margin-left:auto;
+margin-right:auto;
+text-align: center;
+color:darkred;
+}
+table, th, td {
+  border: 3px solid darkred;
+}
