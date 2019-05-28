@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+<body>
+
+<div class="topnav">
+<a href="index.html">Home</a>
+<a href="introtocs.html">Intro to CS</a>
+<a href="webdesign.html">Web Design</a>
+<a href="webpro.html">Web Programming</a>
+<a href="webvr.html">Animation</a>
+</div>
+
+
+<html>
+<head>
+<title>Pacman FINISHED</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript" src="https://static.codehs.com/gulp/ec071a764d83f34910ba21fab0b0f0cc20293542/chs-js-lib/chs.js"></script>
+
+
+<style>
+canvas {
+    border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+}
+
+pre {
+    border: 1px solid black;
+    display: inline-block;
+    width: 400px;
+    height: 500px;
+    background-color: #F5F5F5;
+}
+</style>
+
+</head>
+
+<body>
+<h1>Pacman FINISHED</h1>
+
+
+
+<canvas
+width="400"
+height="500"
+class="codehs-editor-canvas"></canvas>
+<pre id="console"></pre>
+
+<script>
+window.onload = function() {
+
+    var bodyHeight = 50;
+var bodyWidth = 80;
+var smallRadius = 15;
+var centerX = getWidth() /2;
+var centerY = getHeight() /2;
+var midX = getWidth();
+var midY = getHeight();
+var headRadius = 40;
+var eyeHole = 12;
+var eyePupil = 6;
+var pacRadius = 60;
+pacMan(100,10);
+
+
+function start(){
+//BLACK BACKGROUND
+var background = new Rectangle(1100, 1100);
+background.setColor(Color.black);
+background.setPosition(-1,-1);
+add(background);    
+    
+//DRAW PACMAN
+pacMan(25,200);
+    
+//DRAW BORDERS
+theMaze();
+//DRAW GHOSTS
+drawGhost(Color.blue,10,20);
+drawGhost(Color.cyan,267,200);
+drawGhost(Color.orange, 10, 360);
+drawGhost(Color.red, 267, 350);
+
+//DRAW PELLETS
+drawPellet(80,160);  
+drawPellet(80,340); 
+drawPellet(340,340); 
+drawPellet(246,260); 
+drawPellet(170,260); 
+drawPellet(340,160); 
+drawPellet(340,60); 
+
+}
+
+//GHOSTS FUNCTION
+function drawGhost(color,x, y){
+var body = new Rectangle(bodyWidth, bodyHeight);
+body.setColor(color);
+body.setPosition(x+30, y+50);
+add(body);
+
+var circ = new Circle(smallRadius);
+circ.setPosition(x+45, y+95);
+circ.setColor(color);
+add(circ);
+
+var circ = new Circle(smallRadius);
+circ.setPosition(x+70, y+95);
+circ.setColor(color);
+add(circ);
+
+var circ = new Circle(smallRadius);
+circ.setPosition(x+95, y+95);
+circ.setColor(color);
+add(circ);
+
+var circ = new Circle(headRadius);
+circ.setPosition(x+70,y+45);
+circ.setColor(color);
+add(circ);
+
+var circ = new Circle(eyeHole);
+circ.setPosition(x+50,y+45);
+circ.setColor(Color.white);
+add(circ);
+
+var circ = new Circle(eyePupil);
+circ.setPosition(x+55, y+48);
+circ.setColor(Color.blue);
+add(circ);
+
+var circ = new Circle(eyeHole);
+circ.setPosition(x+90,y+45);
+circ.setColor(Color.white);
+add(circ);
+
+var circ = new Circle(eyePupil);
+circ.setPosition(x+96, y+48);
+circ.setColor(Color.blue);
+add(circ);
+}
+
+//PACMAN FUNCTION
+function pacMan(x, y){
+var pacManBody = new Arc(pacRadius, 30, -30, 0);
+pacManBody.setColor(Color.yellow);
+pacManBody.setPosition(x+55, y+55);
+add(pacManBody);
+
+var pacEye = new Circle(10);
+pacEye.setPosition(x+55, y+25);
+pacEye.setColor(Color.black);
+add(pacEye);
+
+}
+//BORDERS FUNCTION
+function theMaze(){
+var border = new Line(10, -10, 10, 200);
+border.setColor(Color.blue);
+border.setLineWidth(3);
+add(border);
+
+var border2 = new Line(10, 320, 10, 480);
+border2.setColor(Color.blue);
+border2.setLineWidth(3);
+add(border2);
+
+var border3 = new Line(390, -10, 390, 480);
+border3.setColor(Color.blue);
+border3.setLineWidth(3);
+add(border3);
+
+var border4 = new Line(280, -10, 280, 200);
+border4.setColor(Color.blue);
+border4.setLineWidth(3);
+add(border4);
+
+var border5 = new Line(150, -10, 150, 200);
+border5.setColor(Color.blue);
+border5.setLineWidth(3);
+add(border5);
+
+var border6 = new Line(150, 320, 150, 480);
+border6.setColor(Color.blue);
+border6.setLineWidth(3);
+add(border6);
+
+var border7 = new Line(280, 320, 280, 480);
+border7.setColor(Color.blue);
+border7.setLineWidth(3);
+add(border7);
+
+var border8 = new Line(148, 200, 282, 200);
+border8.setColor(Color.blue);
+border8.setLineWidth(3);
+add(border8);
+
+var border10 = new Line(12, 320, -10, 320);
+border10.setColor(Color.blue);
+border10.setLineWidth(3);
+add(border10);
+
+var border9 = new Line(148, 320, 282, 320);
+border9.setColor(Color.blue);
+border9.setLineWidth(3);
+add(border9);
+
+var border11 = new Line(12, 200, -10, 200);
+border11.setColor(Color.blue);
+border11.setLineWidth(3);
+add(border11);
+
+}
+//PELLETS FUNCTION
+function drawPellet(x,y){
+var pellet = new Circle(6);
+pellet.setPosition(x,y);
+pellet.setColor(Color.yellow);
+add(pellet);
+}
+
+
+    if (typeof start === 'function') {
+        start();
+    }
+};
+</script>
+
+</body>
+</html>
+
+
+
+
+
+</body>
+</html>

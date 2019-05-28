@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+<body>
+
+<div class="topnav">
+<a href="index.html">Home</a>
+<a href="introtocs.html">Intro to CS</a>
+<a href="webdesign.html">Web Design</a>
+<a href="webpro.html">Web Programming</a>
+<a href="webvr.html">Animation</a>
+</div>
+
+
+<html>
+<head>
+<title>Mario</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript" src="https://static.codehs.com/gulp/ec071a764d83f34910ba21fab0b0f0cc20293542/chs-js-lib/chs.js"></script>
+
+
+<style>
+canvas {
+    border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+}
+
+pre {
+    border: 1px solid black;
+    display: inline-block;
+    width: 400px;
+    height: 500px;
+    background-color: #F5F5F5;
+}
+</style>
+
+</head>
+
+<body>
+<h1>Mario</h1>
+
+
+
+<canvas
+width="400"
+height="500"
+class="codehs-editor-canvas"></canvas>
+<pre id="console"></pre>
+
+<script>
+window.onload = function() {
+
+    function start()
+
+{
+var all = " ";
+    var pyramidheight;
+    var row;
+    var spc;
+    var hash;
+    do    {
+        println("Height from 0 to 13:");
+        pyramidheight = readInt("Height? ");
+              }
+while ((pyramidheight < 0) || (pyramidheight > 13));
+//height prompt
+for (row = 0; row < pyramidheight; row++) 
+//rows
+   { for (spc = (pyramidheight - row); spc > 0; spc--)
+   {print(" ");}
+   //spaces
+for (hash = 1; hash <= (row + 1); hash++){
+     //For    
+print("#"); }
+        //For // 
+        print("#\n");}
+    return 0;
+    
+//Function Start
+}
+
+
+    if (typeof start === 'function') {
+        start();
+    }
+};
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+</body>
+</html>
